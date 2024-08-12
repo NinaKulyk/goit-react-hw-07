@@ -14,15 +14,19 @@ const ContactList = () => {
 
   return (
     <ul className={s.contactList}>
-      {filteredContacts.map((contact) => (
-        <li key={contact.id}>
-          <Contact
-            name={contact.name}
-            number={contact.number}
-            id={contact.id}
-          />
-        </li>
-      ))}
+      {filteredContacts.length ? (
+        filteredContacts.map((contact) => (
+          <li key={contact.id}>
+            <Contact
+              name={contact.name}
+              number={contact.number}
+              id={contact.id}
+            />
+          </li>
+        ))
+      ) : (
+        <h2>No data found</h2>
+      )}
     </ul>
   );
 };
