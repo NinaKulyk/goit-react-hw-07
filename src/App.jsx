@@ -3,7 +3,7 @@ import SearchBox from "./components/SearchBox/SearchBox";
 import ContactList from "./components/ContactList/ContactList";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchContactsThunk } from "./redux/ops";
+import { fetchContactsThunk } from "./redux/contactsOps";
 import { selectLoading } from "./redux/contactsSlice";
 import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
 import "./App.css";
